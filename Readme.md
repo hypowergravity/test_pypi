@@ -62,11 +62,11 @@ package dependency required.
 
 5. Project url which provides documentation of the tool.
 ## project urls
->
+~~~
     [project.urls]
     Documentation = "https://github.com/hypowergravity/test_pypi"
     Source = "https://github.com/hypowergravity/test_pypi"
-
+~~~
 
 6. Building the package using flit
 Once all the inputs are given in the project.toml file, flit build command can be used to build the package.
