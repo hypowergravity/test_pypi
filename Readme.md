@@ -74,10 +74,13 @@ flit build
 ~~~
 
 
-#Install using command line 
+# Install using command line 
+~~~bash
 pip install dist/numpy_numeric-0.1.0.tar.gz
+~~~
 
 
-to uninstall.
+# To uninstall package can be done with package name
+~~~bash
 pip uninstall numpy_numeric 
-#
+~~~
