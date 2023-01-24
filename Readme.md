@@ -1,5 +1,11 @@
 # how to create pypi using flit. 
-It requires two main description. 
+It requires four main description in project.toml file.
+* build-system.
+* meta-data.
+* package dependency.
+* scipts( if any).
+* project-url 
+
 
 
 
@@ -19,15 +25,15 @@ metadata which say the description of the file.
 
 
     [project]
-    name = "astcheck"
+    name = "numpy_numeric" # this is the package name
     authors = [
-        {name = "Thomas Kluyver", email = "thomas@kluyver.me.uk"},
+        {name = "sriram raghavan", email = "hypowergravity@gmail.com"},
     ]
-    readme = "README.rst"
+    readme = "Readme.md"
     classifiers = [
         "License :: OSI Approved :: MIT License",
     ]
-    requires-python = ">=3.5"
+    requires-python = ">=3.7"
     dynamic = ["version", "description"]
 ___
 
@@ -44,9 +50,10 @@ package dependency required.
 
 ## shell script 
     [project.scripts]
-    numpy_numeric = "src.master:main"
+    numpy_numeric = "numpy_numeric.example:run"
+    numpy_numeric_test = "numpy_numeric.test.test_run:run"
 
-The master.py is that script that contatin the function and main is the executable function. 
+    The example.py is that script that contatin the function and run that are executable. 
 
 
 ## project urls
@@ -57,6 +64,20 @@ Source = "https://github.com/hypowergravity/test_pypi"
 
 
 Once all the inputs are given in the project.toml file, flit build command can be used to build the package.
+if flit is not installed, 
+~~~
+pip install flit
+~~~
+
 ~~~bash 
 flit build 
 ~~~
+
+
+#Install using command line 
+pip install dist/numpy_numeric-0.1.0.tar.gz
+
+
+to uninstall.
+pip uninstall numpy_numeric 
+#
