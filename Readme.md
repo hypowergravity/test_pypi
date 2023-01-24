@@ -57,9 +57,9 @@ package dependency required.
 
 
 ## project urls
-[project.urls]
-Documentation = "https://github.com/hypowergravity/test_pypi"
-Source = "https://github.com/hypowergravity/test_pypi"
+    [project.urls]
+    Documentation = "https://github.com/hypowergravity/test_pypi"
+    Source = "https://github.com/hypowergravity/test_pypi"
 
 
 
