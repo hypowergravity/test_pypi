@@ -1,0 +1,31 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+
+[project]
+name = "numpy_numeric"
+authors = [
+    {name = "sriram raghavan", email = "hypowergravity@gmail.com"},
+]
+readme = "Readme_flit.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3"
+dynamic = ["version", "description"]
+
+
+dependencies = [
+    "numpy",
+    "configparser; python_version >= '3'",
+]
+
+[project.scripts]
+numpy_numeric = "numpy_numeric.example:run"
+numpy_numeric_test = "numpy_numeric.test.test_run:run"
+
+
+[project.urls]
+Documentation = "https://github.com/hypowergravity/test_pypi"
+Source = "https://github.com/hypowergravity/test_pypi"
